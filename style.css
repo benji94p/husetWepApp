@@ -1,0 +1,36 @@
+/*GENERAL*/
+    body,html {
+
+        height: 100%;
+        width: 100%;
+        font-family: 'Muli', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+    }
+/* HOMEPAGE */
+.hero_homepage {
+    background-image: url(img/moodboard1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 50%;
+    width: 100%;
+}
+.container_logo {
+    margin-left: 80%;
+    margin-top: -7%;
+}
+
+.showcase_image {
+    background-image: url(img/events_hero.png);
+    width: 233px;
+    height: 233px;
+        text-align: center;
+}
+
+.showcase_header {
+    padding-top: 84px;
+}
