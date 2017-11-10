@@ -34,3 +34,9 @@
 .showcase_header {
     padding-top: 84px;
 }
+
+/* EVENT PAGE */
+
+#event_img {
+    max-height: 200px;
+}
