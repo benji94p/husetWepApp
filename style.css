@@ -10,7 +10,129 @@
 
     h1 {
         font-family: 'Montserrat', sans-serif;
+        text-align: center;
     }
+
+    a {
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+    }
+
+    #logo {
+        margin: 13px;
+    }
+    .align {
+        text-align: center;
+    }
+
+/*BURGER MENU */
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+
+nav li a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav {
+  margin: 0;
+  padding: 0;
+}
+.nav > li {
+  display: block;
+  padding: 12px;
+  position: relative;
+}
+
+.nav li > ul {
+  list-style-type: none;
+  display: none;
+}
+
+.nav li:hover a {
+  color: #000;
+}
+.nav li:hover > ul {
+  display: block;
+  position: relative;
+  top: 100%;
+  left: -5%;
+  width: 100%;
+}
+
+.nav li:hover > ul li {
+   padding: 10px;
+   background-color: #e5e4e2;
+}
+
+.nav li:hover > ul li:hover {
+   background: #d81728;
+}
+
+#burger {
+    color: white;
+    position: relative;
+    left: 40%;
+}
+
 /* HOMEPAGE */
 .hero_homepage {
     background-image: url(img/moodboard1.jpg);
@@ -21,22 +143,105 @@
 }
 .container_logo {
     margin-left: 80%;
-    margin-top: -7%;
+    margin-top: -13%;
 }
+.target_red {
+    color: #d81728;
+}
+#hero_header {
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
 
 .showcase_image {
     background-image: url(img/events_hero.png);
     width: 233px;
     height: 233px;
-        text-align: center;
+    margin: 0 auto;
 }
 
 .showcase_header {
     padding-top: 84px;
+    text-align: center;
+    color: black;
 }
 
 /* EVENT PAGE */
+.bg-site {
+    background-image: url(img/bg_menu.png);
+}
+.event-container h2 {
+    font-weight: 500;
+}
 
+.events {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    margin: 50px;
+
+}
+
+.event-containers {
+    border:3px solid #d81728;
+    width: 251px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 5px;
+    margin-top: -4px;
+
+}
+.event-containers h1 {
+    font-size: 12px;
+    font-weight: 500;
+    grid-column-start: 0;
+    grid-column-end: 2;
+
+}
+.event-containers #date_event {
+    grid-column-start: 0;
+    grid-column-end: 2;
+}
+.event-containers #price {
+    grid-column-start: 0;
+    grid-column-end: 2;
+}
+.event-containers #detail_event {
+    grid-column-start: 2;
+    grid-column-start: 3;
+
+}
 #event_img {
-    max-height: 200px;
+    max-height: 150px;
+    max-width: 300px;
+}
+#detail_event {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #000000;
+  font-size: 10px;
+  background: #e5e4e2;
+  padding: 6px 15px 10px 14px;
+  text-decoration: none;
+}
+
+#detail_event:hover {
+  background: #d81728;
+  text-decoration: none;
+}
+.event-containers button {
+    background: none !important;
+    color: inherit;
+    border: none;
+    padding: 0! important;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit !important;
 }

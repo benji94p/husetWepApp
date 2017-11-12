@@ -9,37 +9,59 @@
 </head>
 
 <body>
-
+    <script src="https://use.fontawesome.com/cfb128ec89.js"></script>
     <div class="hero_homepage">
         <div class="container_top">
-            <img src="img/huset-logo@1x.png">
+            <a href="homepage.html"><img id="logo" src="img/huset-logo@1x.png"></a>
+
             <div class="container_logo">
-            <svg width="54px" height="38px" viewBox="0 0 64 44" version="1.1"                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                    <g id="Mobile-Homepage" transform="translate(-241.000000, -13.000000)" stroke="#000000" stroke-width="2">
-                        <g id="align-center" transform="translate(242.000000, 14.000000)">
-                            <path d="M51,14 L10,14" id="Shape"></path>
-                            <path d="M62,0 L0,0" id="Shape"></path>
-                            <path d="M62,28 L0,28" id="Shape"></path>
-                            <path d="M51,42 L10,42" id="Shape"></path>
-                        </g>
-                    </g>
-                </g>
-            </svg>
+                <!-- The overlay -->
+                <div id="myNav" class="overlay">
+
+                    <!-- Button to close the overlay navigation -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                    <!-- Overlay content -->
+                    <div class="overlay-content">
+                        <ul class="nav">
+                            <li><a href="homepage.html">Home</a></li>
+                            <li><a href="events.html">Events</a>
+                                <ul>
+                                    <li><a href="">By category</a></li>
+                                    <li><a href="events.html">All events</a></li>
+                                    <li><a href="">Coming soon</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Gallery</a></li>
+                            <li><a href="">Practical infos</a>
+                                <ul>
+                                    <li><a href="">Hours</a></li>
+                                    <li><a href="">Maps</a></li>
+                                    <li><a href="">About the house</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Use any element to open/show the overlay navigation menu -->
+
+                <i id="burger" class="fa fa-bars fa-3x" aria-hidden="true" onclick="openNav()"></i>
             </div>
         </div>
-        <h1>Copenhagen's biggest movie house</h1>
+        <h1 id="hero_header">Copenhagen's biggest <span class="target_red">movie</span> house</h1>
     </div>
 
     <div class="showcase_homepage">
-        <div class="showcase_image">
+        <a href="events.html"><div class="showcase_image">
             <h2 class="showcase_header">Events</h2>
-        </div>
+        </div></a>
     </div>
 
+
     <script src="dynamicdata.js"></script>
+    <script src="ui.js"></script>
 </body>
 </html>

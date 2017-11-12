@@ -8,26 +8,71 @@
 </head>
 
 <body>
+        <div class="bg-site container_top">
+            <a href="homepage.html"><img id="logo" src="img/huset-logo@1x.png"></a>
 
-     <ul id="categories_menu">
-                <template id="linkTemplate">
-                    <li><a href="">Item1</a></li>
-                </template>
+            <div class="">
+                <!-- The overlay -->
+                <div id="myNav" class="overlay">
 
-    </ul>
+                    <!-- Button to close the overlay navigation -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-    <section id="eventList">
-    </section>
+                    <!-- Overlay content -->
+                    <div class="overlay-content">
+                        <ul class="nav">
+                            <li><a href="homepage.html">Home</a></li>
+                            <li><a href="events.html">Events</a>
+                                <ul>
+                                    <li><a href="">By category</a></li>
+                                    <li><a href="events.html">All events</a></li>
+                                    <li><a href="">Coming soon</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Gallery</a></li>
+                            <li><a href="">Practical infos</a>
+                                <ul>
+                                    <li><a href="">Hours</a></li>
+                                    <li><a href="">Maps</a></li>
+                                    <li><a href="">About the house</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </div>
 
-    <template id="eventsTemplate">
-        <article class="events">
-            <img id="event_img" src="">
-            <h1 id="title_events"></h1>
-            <span id="date_event"></span>
-            <span id="price"></span>
-            <p><a id="detail_event" href="">Details</a></p>
-        </article>
-    </template>
+                </div>
+
+                <!-- Use any element to open/show the overlay navigation menu -->
+
+                <i id="burger" class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
+            </div>
+        </div>
+            <div class="event-container">
+            <h2 class="align">Events</h2>
+             <ul id="categories_menu">
+                        <template id="linkTemplate">
+                            <li><a href="">Item1</a></li>
+                        </template>
+            </ul>
+
+            <section id="eventList">
+            </section>
+
+            <template id="eventsTemplate">
+                <article class="events">
+                    <img id="event_img" src="">
+                    <div class="event-containers">
+                        <h1 id="title_events"></h1>
+                        <span id="date_event"></span>
+                        <button><a id="detail_event" href="">Details</a></button>
+                        <span id="price"></span>
+
+                    </div>
+                </article>
+            </template>
+            </div>
     <script src="dynamicdata.js"></script>
+    <script src="ui.js"></script>
 </body>
 </html>
