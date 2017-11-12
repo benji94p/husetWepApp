@@ -30,7 +30,6 @@ function showEvents (data) {
     let template = document.querySelector("#eventsTemplate").content;
 
     data.forEach(function(theEvent) {
-        console.log(theEvent);
         let clone = template.cloneNode(true);
         clone.querySelector("#title_events").innerHTML = theEvent.title.rendered;
         clone.querySelector("#date_event").innerHTML = theEvent.acf.dates;
@@ -75,11 +74,10 @@ function showDetailedEvent (json) {
 
 }
 
-//If the url have id, don't get the data
 
 let searchParams = new URLSearchParams(window.location.search);
 let id = searchParams.get("id");
-let categorieid = searchParams.get("categorieid")
+let categorieid = searchParams.get("categorieid");
 
 getMenu();
 
