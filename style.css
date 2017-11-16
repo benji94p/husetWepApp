@@ -27,6 +27,24 @@
         text-align: center;
     }
 
+footer {
+    margin-top: 55px;
+    height: 40px;
+    width: 100%;
+    background-color: #e5e4e2;
+
+}
+
+.social_container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.left_container {
+    border-left: 1px solid black;
+}
+
 /*BURGER MENU */
 
 /* The Overlay (background) */
@@ -168,6 +186,31 @@ nav li a {
     text-align: center;
     color: black;
 }
+.showcase_homepage {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.showcase_homepage i {
+    margin-top: 136px;
+    width: 15px;
+    position: relative;
+    left:5%;
+}
+.slider_container {
+    width: 229px;
+    height: 229px;
+    border:3px solid #d81728;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-image: url();
+}
+.switch_pages_header {
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+}
 
 /* EVENT PAGE */
 .bg-site {
@@ -244,4 +287,107 @@ nav li a {
     font: inherit;
     cursor: pointer;
     outline: inherit !important;
+}
+#categories_menu a {
+    color: black;
+}
+
+/*MODAL*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* CONTENT MODAL */
+
+#big_img
+{
+    max-width:100%;
+    border: 3px solid #d81728;
+
+}
+#h_modal {
+    text-align: center;
+}
+.time_container {
+    display: flex;
+    flex-direction: column;
+}
+/*DROPDOWN CATEGORY*/
+li a, .dropbtn {
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    color: #d81728;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 14px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;}
+.dropdown button {
+    color: black;
+}
+#red_events {
+        color: black;
+        position: relative;
+        left: 51%;
 }

@@ -12,7 +12,10 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="library/touchTouch/touchTouch.css">
+
+
+
+
 </head>
 
 <body>
@@ -52,63 +55,8 @@
                 <i id="burger" class="fa fa-bars fa-3x" aria-hidden="true" onclick="openNav()"></i>
             </div>
         </div>
-            <div class="event-container">
-            <h2 class="align">Events</h2>
-            <ul>
-                <div class="dropdown">
-                    <button href="javascript:void(0)" class="dropbtn">Genre
-                    <i class="fa fa-caret-down"></i></button>
-                    <div id="categories_menu" class="dropdown-content">
-                    </div>
-                    <a id="red_events" href="events.html">All events
-                    <i class="fa fa-undo"></i></a>
-                </div>
-            </ul>
-             <ul id="categories_menu">
-                        <template id="linkTemplate">
-                            <li><a href="">Item1</a></li>
-                        </template>
-            </ul>
+        <h2 class="align">Gallery</h2>
 
-            <section id="eventList">
-                <!-- Trigger/Open The Modal -->
-               <!-- <button id="myBtn">Open Modal</button>-->
-
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <img id="big_img" src="">
-                        <h2 id="h_modal"></h2>
-                        <p id="full_d"></p>
-                        <h3>Time & Place</h3>
-                        <div class="time_container">
-                            <span id="date_modal"></span>
-                            <span id="time_modal"></span>
-                        </div>
-                        <h3>Price & Registration</h3>
-                            <span id="price_modal"></span>
-                            <span id="fb_event"></span>
-                    </div>
-
-                </div>
-            </section>
-
-            <template id="eventsTemplate">
-                <article class="events">
-                    <img id="event_img" src="">
-                    <div class="event-containers">
-                        <h1 id="title_events"></h1>
-                        <span id="date_event"></span>
-                        <a id="detail_event" >Details</a>
-                        <span id="price"></span>
-
-                    </div>
-                </article>
-            </template>
-            </div>
 
     <footer>
         <div class="social_container">
@@ -119,7 +67,10 @@
         </div>
 
     </footer>
-    <script src="dynamicdata.js"></script>
+<script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <script src="library/touchTouch/touchTouch.jquery.js"></script>
+     <script src="dynamicdata.js"></script>
     <script src="ui.js"></script>
 
 </body>
