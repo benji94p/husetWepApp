@@ -1,4 +1,17 @@
+/*LOADER*/
 
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('eventList').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('eventList').style.visibility="visible";
+      },1000);
+  }
+}
 
 /* ALL EVENTS.HTML */
 function getAllEvents() {
@@ -34,7 +47,9 @@ function showEvents(data) {
     data.forEach(function (theEvent) {
         let clone = template.cloneNode(true);
         clone.querySelector("#title_events").innerHTML = theEvent.title.rendered;
-        clone.querySelector("#date_event").innerHTML = theEvent.acf.dates;
+        let dateRaw = theEvent.acf.dates;
+        let dateChar = dateRaw.slice(0, 4)+ "/"+ dateRaw.slice(4, 6)+"/"+dateRaw.slice(6, 8);
+        clone.querySelector("#date_event").innerHTML = dateChar;
         clone.querySelector("#price").innerHTML = theEvent.acf.price + "$";
         if (theEvent.better_featured_image !== null) {
             clone.querySelector("#event_img").src = theEvent.better_featured_image.source_url;
@@ -73,14 +88,16 @@ function showMenu(categories) {
 
 function openModal(json) {
     console.log(json);
+    let dateRaw = json.acf.dates;
+        let dateChar = dateRaw.slice(0, 4)+ "/"+ dateRaw.slice(4, 6)+"/"+dateRaw.slice(6, 8);
     document.getElementById('myModal').style.display = "block";
     document.querySelector(".modal-content #big_img").src = json.better_featured_image.source_url;
     document.querySelector(".modal-content #h_modal").innerHTML = json.title.rendered;
     document.querySelector(".modal-content #full_d").innerHTML =  json.excerpt.rendered;
-    document.querySelector(".modal-content #date_modal").innerHTML = json.acf.dates;
+    document.querySelector(".modal-content #date_modal").innerHTML = dateChar;
     document.querySelector(".modal-content #time_modal").innerHTML = json.acf.time;
-    document.querySelector(".modal-content #price_modal").innerHTML = json.acf.price;
-    document.querySelector(".modal-content #fb_event").innerHTML = json.acf.facebook_event_page;
+    document.querySelector(".modal-content #price_modal").innerHTML = json.acf.price + " Kr";
+    document.querySelector(".modal-content #fb_event").href = json.acf.facebook_event_page;
     var span = document.getElementsByClassName("close")[0];
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
@@ -169,26 +186,5 @@ arrowLeft.addEventListener("click",function() {
 
 })
 
-/* GALLERY */
 
-
-function getMedia() {
-    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/media")
-        .then(function (response) {
-            return response.json()
-        })
-        .then(deployImage);
-}
-
-function deployImage (json) {
-    json.forEach(showImage);
-}
-
-function showImage (singleImage) {
-     if (singleImage.title.rendered == "gallery") {
-        console.log(singleImage);
-    }
-};
-
-getMedia() ;
 
