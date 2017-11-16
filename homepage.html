@@ -6,6 +6,17 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Muli" rel="stylesheet">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <!-- or -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -13,7 +24,6 @@
     <div class="hero_homepage">
         <div class="container_top">
             <a href="homepage.html"><img id="logo" src="img/huset-logo@1x.png"></a>
-
             <div class="container_logo">
                 <!-- The overlay -->
                 <div id="myNav" class="overlay">
@@ -26,11 +36,6 @@
                         <ul class="nav">
                             <li><a href="homepage.html">Home</a></li>
                             <li><a href="events.html">Events</a>
-                                <ul>
-                                    <li><a href="">By category</a></li>
-                                    <li><a href="events.html">All events</a></li>
-                                    <li><a href="">Coming soon</a></li>
-                                </ul>
                             </li>
                             <li><a href="">Gallery</a></li>
                             <li><a href="">Practical infos</a>
@@ -55,11 +60,23 @@
     </div>
 
     <div class="showcase_homepage">
-        <a href="events.html"><div class="showcase_image">
-            <h2 class="showcase_header">Events</h2>
-        </div></a>
+        <i id="arrow_left" class="fa fa-arrow-left" aria-hidden="true"></i>
+        <a id="link_slider" href=""><div class="slider_container animated">
+            <h3 class="switch_pages_header"></h3>
+            </div></a>
+        <i id="arrow_right" class="fa fa-arrow-right" aria-hidden="true"></i>
     </div>
+    <a href="events.html"></a>
 
+    <footer>
+        <div class="social_container">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <i class="fa fa-tripadvisor" aria-hidden="true"></i>
+        </div>
+
+    </footer>
 
     <script src="dynamicdata.js"></script>
     <script src="ui.js"></script>
